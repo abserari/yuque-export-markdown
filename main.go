@@ -35,7 +35,6 @@ var (
 )
 
 func main() {
-
 	flag.StringVar(&token, "token", "", "token")
 	flag.StringVar(&ns, "ns", "", "owner/repo")
 	flag.StringVar(&target, "target", "/Users/seven/Desktop/kb2", "save path")

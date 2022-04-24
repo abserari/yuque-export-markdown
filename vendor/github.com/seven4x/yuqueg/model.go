@@ -1,6 +1,8 @@
 package yuqueg
 
-import "time"
+import (
+	"time"
+)
 
 var (
 	// BaseAPI address
@@ -395,11 +397,11 @@ type RepoTocData struct {
 func (r *RepoTocDataWithGroup) ToRepoTocData() RepoTocData {
 	var id int
 	var docid int
-	if v, ok := r.Id.(int); ok {
-		id = v
+	if v, ok := r.Id.(float64); ok {
+		id = int(v)
 	}
-	if v, ok := r.DocId.(int); ok {
-		docid = v
+	if v, ok := r.DocId.(float64); ok {
+		docid = int(v)
 	}
 	return RepoTocData{
 		Id:          id,
