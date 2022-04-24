@@ -4,9 +4,6 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	md "github.com/JohannesKaufmann/html-to-markdown"
-	"github.com/seven4x/yuqueg"
-	"golang.org/x/sync/semaphore"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -17,6 +14,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	md "github.com/JohannesKaufmann/html-to-markdown"
+	"github.com/seven4x/yuqueg"
+	"golang.org/x/sync/semaphore"
 )
 
 const (
