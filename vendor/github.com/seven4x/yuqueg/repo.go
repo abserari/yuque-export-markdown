@@ -133,6 +133,9 @@ func (r RepoService) GetToc(namespace string) (RepoToc, error) {
 	}
 	for _, v := range tmp.Data {
 		t := v.ToRepoTocData()
+		if t.Id == 0 {
+			continue
+		}
 		u.Data = append(u.Data, t)
 	}
 	return u, nil
